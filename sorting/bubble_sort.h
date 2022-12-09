@@ -16,7 +16,6 @@
  * =====================================================================================
  */
 #include <array>
-#include <cstdio>
 
 template <typename T, std::size_t N>
 void BubbleSort(std::array<T, N>& arr) {
@@ -27,14 +26,4 @@ void BubbleSort(std::array<T, N>& arr) {
       }
     }
   }
-}
-
-int main(int argc, char* argv[]) {
-  std::array<int, 10> nums = {8, 7, 0, 1, 2, 9, 4, 5, 3, 6};
-  BubbleSort(nums);
-  for (const int n : nums) {
-    printf("%d ", n);
-  }
-  printf("\n");
-  return 0;
 }

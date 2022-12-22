@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  bubble_sort_test.cpp
+ *       Filename:  selection_sort_test.cpp
  *
- *    Description:  Unit test for bubble sort.
+ *    Description:  Unit test for selection sort.
  *
  *        Version:  1.0
- *        Created:  12/09/2022 14:01:47
+ *        Created:  12/22/2022 15:45:02
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,7 +15,7 @@
  *
  * =====================================================================================
  */
-#include "bubble_sort.h"
+#include "selection_sort.h"
 #include "array_helper.h"
 
 #include <algorithm>
@@ -25,45 +25,45 @@
 #include "gmock/gmock.h"
 #include "gtest/gtest.h"
 
-TEST(BubbleSort, Int1) {
+TEST(SelectionSort, Int1) {
   std::array<int, 1> nums{1};
-  BubbleSort(nums);
+  SelectionSort(nums);
   EXPECT_THAT(nums, testing::ElementsAreArray<int>({1}));
 }
 
-TEST(BubbleSort, Int5) {
+TEST(SelectionSort, Int5) {
   std::array<int, 5> nums = {0, 4, 3, 2, 1};
   std::array<int, 5> copy = nums;
-  BubbleSort(nums);
+  SelectionSort(nums);
   std::sort(copy.begin(), copy.end());
   EXPECT_THAT(nums, testing::ElementsAreArray(copy));
 };
 
-TEST(BubbleSort, Int10) {
+TEST(SelectionSort, Int10) {
   std::array<int, 10> nums = {8, 7, 0, 1, 2, 9, 4, 5, 3, 6};
   std::array<int, 10> copy = nums;
-  BubbleSort(nums);
+  SelectionSort(nums);
   std::sort(copy.begin(), copy.end());
   EXPECT_THAT(nums, testing::ElementsAreArray(copy));
 }
 
-TEST(BubbleSort, Duplicated) {
+TEST(SelectionSort, Duplicated) {
   std::array<int, 6> nums = {3, 0, 1, 5, 3, 0};
   std::array<int, 6> copy = nums;
-  BubbleSort(nums);
+  SelectionSort(nums);
   std::sort(copy.begin(), copy.end());
   EXPECT_THAT(nums, testing::ElementsAreArray(copy));
 }
 
-class BubbleSortTest : public testing::Test {
+class SelectionSortTest : public testing::Test {
  protected:
   void SetUp() override { std::srand(std::time(nullptr)); }
 };
 
-TEST_F(BubbleSortTest, Random) {
+TEST_F(SelectionSortTest, Random) {
   std::array<int, 100> nums = GenRandArray<100>();
   std::array<int, 100> copy = nums;
-  BubbleSort(nums);
+  SelectionSort(nums);
   std::sort(copy.begin(), copy.end());
   EXPECT_THAT(nums, testing::ElementsAreArray(copy));
 }

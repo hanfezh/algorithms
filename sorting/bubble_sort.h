@@ -1,7 +1,7 @@
 /*
  * =====================================================================================
  *
- *       Filename:  bubble_sort.cpp
+ *       Filename:  bubble_sort.h
  *
  *    Description:  Bubble sort.
  *
@@ -15,6 +15,9 @@
  *
  * =====================================================================================
  */
+#ifndef SORTING_BUBBLE_SORT_H__
+#define SORTING_BUBBLE_SORT_H__
+
 #include <array>
 
 template <typename T, std::size_t N>
@@ -27,3 +30,5 @@ void BubbleSort(std::array<T, N>& arr) {
     }
   }
 }
+
+#endif  // SORTING_BUBBLE_SORT_H__

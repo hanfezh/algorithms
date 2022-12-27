@@ -15,6 +15,9 @@
  *
  * =====================================================================================
  */
+#ifndef SORTING_INSERTION_SORT_H__
+#define SORTING_INSERTION_SORT_H__
+
 #include <array>
 
 template <typename T, std::size_t N>
@@ -31,3 +34,5 @@ void InsertionSort(std::array<T, N>& arr) {
     }
   }
 }
+
+#endif  // SORTING_INSERTION_SORT_H__

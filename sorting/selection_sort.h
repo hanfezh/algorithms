@@ -15,6 +15,9 @@
  *
  * =====================================================================================
  */
+#ifndef SORTING_SELECTION_SORT_H__
+#define SORTING_SELECTION_SORT_H__
+
 #include <array>
 
 template <typename T, std::size_t N>
@@ -31,3 +34,5 @@ void SelectionSort(std::array<T, N>& arr) {
     }
   }
 }
+
+#endif  // SORTING_SELECTION_SORT_H__

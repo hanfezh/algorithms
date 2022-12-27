@@ -15,6 +15,9 @@
  *
  * =====================================================================================
  */
+#ifndef SORTING_MERGE_SORT_H__
+#define SORTING_MERGE_SORT_H__
+
 #include <array>
 
 template <typename T, std::size_t N>
@@ -61,3 +64,5 @@ void MergeSort(std::array<T, N>& arr) {
   std::array<T, N> copy;
   _MergeSort(arr, copy, 0, N);
 }
+
+#endif  // SORTING_MERGE_SORT_H__

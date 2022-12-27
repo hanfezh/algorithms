@@ -1,12 +1,12 @@
 /*
  * =====================================================================================
  *
- *       Filename:  array_helper.h
+ *       Filename:  array_helper.cpp
  *
  *    Description:  Helper functions for array.
  *
  *        Version:  1.0
- *        Created:  12/22/2022 16:00:47
+ *        Created:  12/27/2022 14:42:26
  *       Revision:  none
  *       Compiler:  gcc
  *
@@ -15,22 +15,12 @@
  *
  * =====================================================================================
  */
-#ifndef SORTING_ARRAY_HELPER_H__
-#define SORTING_ARRAY_HELPER_H__
+#include "array_helper.h"
 
-#include <array>
-#include <cstdlib>
-#include <vector>
-
-template <std::size_t N>
-std::array<int, N> GenRandArray() {
-  std::array<int, N> arr;
-  for (int i = 0; i < N; i++) {
+std::vector<int> GenRandVector(const std::size_t n) {
+  std::vector<int> arr(n);
+  for (int i = 0; i < n; i++) {
     arr[i] = std::rand();
   }
   return arr;
 }
-
-std::vector<int> GenRandVector(const std::size_t n);
-
-#endif  // SORTING_ARRAY_HELPER_H__
